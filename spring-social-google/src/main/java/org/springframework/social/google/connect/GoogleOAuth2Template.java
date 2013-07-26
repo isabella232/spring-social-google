@@ -24,7 +24,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.OAuth2Template;
-import org.springframework.util.MultiValueMap;
 
 /**
  * Google-specific extension to OAuth2Template.
@@ -39,7 +38,6 @@ public class GoogleOAuth2Template extends OAuth2Template {
 		setUseParametersForClientAuthentication(true);
 	}
 
-	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
 		HttpHeaders headers = new HttpHeaders();
